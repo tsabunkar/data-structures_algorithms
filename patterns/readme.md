@@ -13,3 +13,9 @@
 - Consider we have liner items : [-4,-3,-2,-1,0,1,2,5], 'alsksjfigjhids'
   We will keep two pointers i and j at any desirable postion and move this pointer to specific direction
   based on the necessiaty
+
+3. Sliding Window
+
+- This pattern involves creating a window which can either be an array or number from one position to another
+- Depending on a certain condition, the window either increases or closes (and a new window is created).
+- Very useful for keeping track of a subset of data in an array/string etc.
