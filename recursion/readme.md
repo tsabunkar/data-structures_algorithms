@@ -22,3 +22,9 @@ What is recursion ?
 - Thus two essential parts of a rescursive function : Base case and Different Input
 
 ---
+
+# Pure Recursion Tips :
+
+- for arrays, use methods like : slice, the pread operator and concat that make copies of array so you do not mutate them.
+- Remember that strings are immutable so you will need to use methods like slice, substr or substring to make copies of string.
+- To make copies of object use Object.assign() or spread operator.
