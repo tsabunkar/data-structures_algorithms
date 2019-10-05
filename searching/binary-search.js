@@ -5,6 +5,13 @@
  * - binary seach only work for SORTED Arrays
  */
 
+/**
+ * Time Complexity :
+ * Best : O(1)
+ * Aveg : O(log(n))
+ * Worst : O(log(n))
+ */
+
 function binarySearch(arr, elementToSearch) {
   let first = 0;
   let last = arr.length - 1;
