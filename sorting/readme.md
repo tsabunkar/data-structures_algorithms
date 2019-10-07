@@ -17,3 +17,18 @@
       1. If it return negative number, a should come before b
       2. If it return positive number, a should come after b
       3. If it return 0, a and b are the same as far as the sort is concerned
+
+---
+
+# Bubble Sort/Sinking Sort
+
+- A sorting algorithm where the largest values bubble up to the top
+- largest value is at the end of first iteration
+- Time Complexity : O(n^2)
+- If data is already sorted just bit of element is not sort, then this scneario keeping noSwap flag, wje can conside time complexity is linear - O(n)
+- https://visualgo.net/en/sorting
+
+# Selection Sort
+
+- Similar to bubble sort but instead of first placing large values into sorted position, it places small values into sorted position
+- Check all the visual alog for all sorting algorithm : https://visualgo.net/en/sorting
