@@ -24,9 +24,13 @@
 
 - A sorting algorithm where the largest values bubble up to the top
 - largest value is at the end of first iteration
-- Time Complexity : O(n^2)
 - If data is already sorted just bit of element is not sort, then this scneario keeping noSwap flag, wje can conside time complexity is linear - O(n)
 - https://visualgo.net/en/sorting
+- Time Complexity :
+  - Best : O(n)
+  - Aveg : O(n^2)
+  - Worst : O(n^2) <---Always Consider
+- Space Complexity : O(1)
 
 # Selection Sort
 
@@ -34,3 +38,19 @@
 - Check all the visual alog for all sorting algorithm : https://visualgo.net/en/sorting
 - Time Complexity : O(n^2)
 - Selection sort is better than bubble sort only in scenario where : If we want to minimize number of swapping. (Writing to memory)
+- Time Complexity :
+  - Best : O(n^2)
+  - Aveg : O(n^2)
+  - Worst : O(n^2) <---Always Consider
+- Space Complexity : O(1)
+
+# Insertion Sort
+
+- Builds up the sort by gradually creating a large left half which is always sorted.
+- Time Complexity : Worst case : O(n^2)
+- Good Sorting Algo - when data is coming live from some server or external source bcoz we always have sorted array on left side of the window ( 'j'th window)
+- Time Complexity :
+  - Best : O(n)
+  - Aveg : O(n^2)
+  - Worst : O(n^2) <---Always Consider
+- Space Complexity : O(1)
