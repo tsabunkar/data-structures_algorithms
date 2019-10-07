@@ -32,3 +32,5 @@
 
 - Similar to bubble sort but instead of first placing large values into sorted position, it places small values into sorted position
 - Check all the visual alog for all sorting algorithm : https://visualgo.net/en/sorting
+- Time Complexity : O(n^2)
+- Selection sort is better than bubble sort only in scenario where : If we want to minimize number of swapping. (Writing to memory)
