@@ -76,3 +76,19 @@
 - How time complexity is O(nlog(n))
   ---> O(log(n)) = decompostions/spliting array into halves [ Remeber : mergeSort(arr.slice()) gives log(n) bcoz number of decompostions is lograthmic to base 2 ex- If we have 8 elements then number of splits/decomposition is 3, thus 2^3 = 8 or log(8) = 3]
   ---> O(n) = comparsions per decomposition [ Remeber : merge() function has while loops = K x O(n) = O(n) ]
+
+---
+
+# Quick Sort
+
+- Like Merge sort, exploits the fact that arrays of 0 or 1 element are always sorted.
+- Works by selecting one element (called the 'pivot') and finding the index where the pivot should end up
+  in the sorted array.
+- Once the pivot is positioned appropriately, quick sort can be applied on either side of the pivot
+- Time Complexity :
+  - Best : O(nlog(n))
+  - Aveg : O(nlog(n))
+  - Worst : O(n^2) <---Always Consider
+    (Already sorted array, when assumed pivot index to be at first or last position in the array --> this will resultant to Quadratic Time Complexity)
+    [Thus to solve this problem- Pick the Middle or random pivot Index ]
+- Space Complexity : O(log(n))
