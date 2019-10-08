@@ -92,3 +92,22 @@
     (Already sorted array, when assumed pivot index to be at first or last position in the array --> this will resultant to Quadratic Time Complexity)
     [Thus to solve this problem- Pick the Middle or random pivot Index ]
 - Space Complexity : O(log(n))
+
+---
+
+# Radix Sort
+
+- All the above sorts were comparsion sort, which means we are comparing one element with another element and then sorting those element based on less or greate than comparsion.
+- Thus maximum we can achieve Time Complexity is : O(nlog(n)) in Comparing sorting algo's ==>
+  Ref : https://en.wikipedia.org/wiki/Comparison_sort
+- Radix is not comparsion based sorting technique
+- Radix sort is a special sorting alogrithm that works on list of numbers (base-10 numbers)
+- It never makes comparsion between elements.
+- It exploits the fact that information about the size of a number is encoded in the number of digits
+- More digits means a bigger number
+- Better understanding check : - https://visualgo.net/en/sorting for Radix sort ( You will understand the concept of transfering the element from bucket to an array and vice-versa easily)
+- Time Complexity :
+  - Best : O(nk) [ n- length of array, k- number of digitis in max number value ]
+  - Aveg : O(nk)
+  - Worst : O(nk) <---Always Consider
+- Space Complexity : O(n+k)
