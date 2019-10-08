@@ -54,3 +54,25 @@
   - Aveg : O(n^2)
   - Worst : O(n^2) <---Always Consider
 - Space Complexity : O(1)
+
+---
+
+- Elementary Sorting Algo : Bubble, Selection and Insetion sorts are very basic sorting algo which has quadratic Time comlexity
+
+- Intermediate Sorting Algo : Merge, Quick and Radix sorts have lesser time complexity than compared to quadratic Time Complexity, Thus these are efficient algo's.
+
+---
+
+# Merge Sort
+
+- It is a combination of two thing : Merging and Sorting
+- Exploits the fact that arrays of 0 or 1 elements are always sorted.
+- Works by decomposing an array into smaller arrays of 0 or 1 elements, then building up a newly sorted array (Divide and Conquer technique)
+- Time Complexity :
+  - Best : O(nlog(n))
+  - Aveg : O(nlog(n))
+  - Worst : O(nlog(n)) <---Always Consider
+- Space Complexity : O(n) <--- Increased :O
+- How time complexity is O(nlog(n))
+  ---> O(log(n)) = decompostions/spliting array into halves [ Remeber : mergeSort(arr.slice()) gives log(n) bcoz number of decompostions is lograthmic to base 2 ex- If we have 8 elements then number of splits/decomposition is 3, thus 2^3 = 8 or log(8) = 3]
+  ---> O(n) = comparsions per decomposition [ Remeber : merge() function has while loops = K x O(n) = O(n) ]
