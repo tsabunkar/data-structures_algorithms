@@ -47,6 +47,26 @@ class SinglyLinkedList {
     this.length++;
     return this;
   }
+
+  traverse() {
+    // travers all the node in list
+    let currentNode = this.head;
+    while (currentNode) {
+      console.log(currentNode.value);
+      currentNode = currentNode.next;
+    }
+  }
+
+  /**
+   * Poping pseudocode:
+   * - If there are no nodes in the list, return undefined
+   * - Loop through the list untill you reach the tail
+   * - Set the next property of the 2nd to last node to be null
+   * - Set the tail to be the 2nd to last node
+   * - Decrement the length of the list by 1
+   * - Return the value of the node removed
+   */
+  pop() {}
 }
 
 let list = new SinglyLinkedList();
@@ -54,3 +74,5 @@ list.push('HI');
 list.push('hello there');
 list.push('I am Tejas Sabunkar');
 console.log(JSON.stringify(list));
+// !Traversing through all the nodes
+list.traverse();
