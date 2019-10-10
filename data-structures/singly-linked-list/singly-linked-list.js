@@ -2,9 +2,6 @@
 // Reference to next ndoe - next
 
 class Node {
-  value;
-  next;
-
   constructor(value) {
     this.value = value;
     this.next = null;
@@ -20,10 +17,6 @@ first.next.next = new Node('Sabunkar');
  */
 
 class SinglyLinkedList {
-  head;
-  tail;
-  length;
-
   constructor() {
     // Wkt, linked list has head, tail and length
     this.head = null;
@@ -41,5 +34,23 @@ class SinglyLinkedList {
    * - Increment the length by one
    *
    */
-  push(value) {}
+  push(value) {
+    let node = new Node(value);
+    if (!this.head) {
+      this.head = node;
+      this.head = this.tail = node;
+    } else {
+      this.tail.next = node; // next property in the tail is set to new node
+      this.tail = node; // tail property is set to newly created node.
+    }
+
+    this.length++;
+    return this;
+  }
 }
+
+let list = new SinglyLinkedList();
+list.push('HI');
+list.push('hello there');
+list.push('I am Tejas Sabunkar');
+console.log(JSON.stringify(list));
