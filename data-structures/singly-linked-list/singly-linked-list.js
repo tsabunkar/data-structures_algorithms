@@ -66,7 +66,27 @@ class SinglyLinkedList {
    * - Decrement the length of the list by 1
    * - Return the value of the node removed
    */
-  pop() {}
+  pop() {
+    if (this.length === 0 || !this.head) {
+      return undefined;
+    }
+
+    let current = this.head;
+    let newTail = current; // 2nd to last node
+
+    while (current.next) {
+      newTail = current;
+      current = current.next;
+    }
+    this.tail = newTail; // Tail value is set to 2nd last poistion node value
+    this.tail.next = null; // de-referencing the last node
+    this.length--;
+    if (this.length === 0 && this.head === this.tail) {
+      this.head = null;
+      this.tail = null;
+    }
+    return current;
+  }
 }
 
 let list = new SinglyLinkedList();
@@ -76,3 +96,9 @@ list.push('I am Tejas Sabunkar');
 console.log(JSON.stringify(list));
 // !Traversing through all the nodes
 list.traverse();
+
+console.log('________poping___________');
+console.log(list.pop());
+console.log(list.pop());
+console.log(list.pop());
+console.log(JSON.stringify(list));
