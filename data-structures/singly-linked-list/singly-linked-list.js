@@ -87,18 +87,75 @@ class SinglyLinkedList {
     }
     return current;
   }
+
+  /**
+   * Shifting pseudocode:
+   * - If there are no nodes, return undefined
+   * - Store the current head property in a variable
+   * - Set the head property to be the current head's next property
+   * - Decrement the length by 1
+   * - Return the value of the node removed
+   */
+
+  shift() {
+    if (this.length === 0) {
+      return undefined;
+    }
+    let oldHead = this.head;
+    this.head = this.head.next;
+    this.length--;
+    if (this.length === 0 && this.head === this.tail) {
+      this.head = null;
+      this.tail = null;
+    }
+    return oldHead;
+  }
+
+  /**
+   * Unshift pseudo code :
+   * - The function should accept a value
+   * - Create a new node using the value passed to the function
+   * - If there is no head property on the list, set the head and tail to be the newly created node
+   * - Otherwise set the newly create node's next property to be the current head property on the list
+   * - Set the head property on the list to be that newly created node
+   * - Increment the length of the list by 1
+   * - Return the linked list
+   */
+  unshift(value) {
+    let newNode = new Node(value);
+    if (!this.head) {
+      /* this.head = newNode;
+      this.tail = newNode; */
+      this.head = this.tail = newNode;
+    } else {
+      newNode.next = this.head;
+      this.head = newNode; // Setting head to be new Node value
+    }
+    this.length++;
+    return this;
+  }
 }
 
 let list = new SinglyLinkedList();
 list.push('HI');
 list.push('hello there');
 list.push('I am Tejas Sabunkar');
+
 console.log(JSON.stringify(list));
 // !Traversing through all the nodes
-list.traverse();
+/* list.traverse(); */
 
-console.log('________poping___________');
+/* console.log('________poping___________');
 console.log(list.pop());
 console.log(list.pop());
 console.log(list.pop());
+console.log(JSON.stringify(list)); */
+
+/* console.log('_______shifting_______');
+console.log(list.shift());
+
+console.log(JSON.stringify(list)); */
+
+console.log('_______unshifting_______');
+console.log(list.unshift('BROO'));
 console.log(JSON.stringify(list));
