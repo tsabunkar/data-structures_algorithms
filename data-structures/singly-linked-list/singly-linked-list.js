@@ -134,12 +134,51 @@ class SinglyLinkedList {
     this.length++;
     return this;
   }
+
+  /**
+   * Get pseudocode:-
+   * - This function should accept an index
+   * - if the index is less than zero or greater than or equal to the length of the list, return null
+   * - Loop through the list untill you reach the index and return the node at that specific index
+   */
+  get(indexPosition) {
+    if (indexPosition < 0 || indexPosition >= this.length) {
+      return null;
+    }
+    let counter = 0;
+    let currentHead = this.head;
+
+    while (counter !== indexPosition) {
+      currentHead = currentHead.next;
+      counter++;
+    }
+    // Return the node
+    return currentHead;
+  }
+
+  /**
+   * Set pseudocode:
+   * - This function should accept a value and an index
+   * - Use your get function to find the specific node
+   * - If the node is not found, return the false
+   * - If the node is found, set the value of the node to be the value passed to the function and return true
+   */
+  set(newValue, index) {
+    let foundNode = this.get(index);
+    if (!foundNode) {
+      return false;
+    }
+    foundNode.value = newValue;
+    return true;
+  }
 }
 
 let list = new SinglyLinkedList();
 list.push('HI');
 list.push('hello there');
 list.push('I am Tejas Sabunkar');
+list.push('Software developer');
+list.push('In Mindtree');
 
 console.log(JSON.stringify(list));
 // !Traversing through all the nodes
@@ -156,6 +195,14 @@ console.log(list.shift());
 
 console.log(JSON.stringify(list)); */
 
-console.log('_______unshifting_______');
+/* console.log('_______unshifting_______');
 console.log(list.unshift('BROO'));
+console.log(JSON.stringify(list)); */
+
+console.log('_______GET_________');
+console.log(list.get(2));
+console.log(list.get(4));
+
+console.log('___________SET__________');
+console.log(list.set('I am usha Sabunkar', 2));
 console.log(JSON.stringify(list));
