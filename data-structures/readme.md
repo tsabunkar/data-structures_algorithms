@@ -71,3 +71,10 @@
 NOTE: Linked is good at insertion and deletion of the element in any position bcoz Array has problem of re-indexing the complete array.
 
 ---
+
+# Different functions to be performed in Singly Linked List :
+
+- Push
+- Pop
+- Shift : Removing a new node from the beginning of the linked list (Remove the head node and 2nd node b'comes the new node)
+- Unshift : Adding a new node to the beginning of the linked list
