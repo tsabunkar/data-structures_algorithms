@@ -78,3 +78,5 @@ NOTE: Linked is good at insertion and deletion of the element in any position bc
 - Pop
 - Shift : Removing a new node from the beginning of the linked list (Remove the head node and 2nd node b'comes the new node)
 - Unshift : Adding a new node to the beginning of the linked list
+- Get : Retrieving a node by it's position in the linked list
+- Set : Changing the value of a node based on its position in the linked list
