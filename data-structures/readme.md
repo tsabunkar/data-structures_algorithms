@@ -68,17 +68,35 @@
   - Insertion and deletion can be expensive
   - Can quickly be accessed at a specific index
 
-NOTE: Linked is good at insertion and deletion of the element in any position bcoz Array has problem of re-indexing the complete array.
+NOTE:
+
+- Linked is good at insertion and deletion of the element in any position bcoz Array has problem of re-indexing the complete array.
+- Searching and accessing --> Array is preffered winner over singly linked list (bcoz- Array has random access, Means it has constant time to access the element when array are indexed (but only indexing take time) )
+- Singly linked lists are an excellent alternative to arrays when insertion and deletion at the beginning are frequently required
+- Arrays contain a built in index whereas linked lists do not
+- The idea of a list data structures that consists of nodes is the foundation for other data structures like Stacks and Queues
 
 ---
 
 # Different functions to be performed in Singly Linked List :
 
-- Push
-- Pop
+- Push : Adding a new node to the end of the linked list
+- Pop : Removing a node from the end of the linked list
 - Shift : Removing a new node from the beginning of the linked list (Remove the head node and 2nd node b'comes the new node)
 - Unshift : Adding a new node to the beginning of the linked list
 - Get : Retrieving a node by it's position in the linked list
 - Set : Changing the value of a node based on its position in the linked list
 - Insert : Adding a node to the linked list at a specific postion
 - Remove : Removing a node from the linked list at a specific position
+- Reverse : Reversing the linked list in place!
+
+---
+
+# Big O of Singly Linked List
+
+- Insert : O(1) [ push,Unshift ]
+- Removal - Depends ==> O(1) or O(n) [ Shift -> O(1) , Pop -> O(n) ]
+- Search - O(n) [ Get ]
+- Access - O(n)
+
+---

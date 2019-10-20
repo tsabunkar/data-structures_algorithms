@@ -239,6 +239,48 @@ class SinglyLinkedList {
     console.log('________________');
     return removedNode;
   }
+
+  /**
+   * Reversing pseudocode:
+   * - Swap the head and tail
+   * - Create a variable called next
+   * - Create a variable called prev
+   * - Create a variable called node and initialize it to the head property
+   * - Loop through the list
+   * - Set next to be the next property on whatever node is
+   * - Set the next property on the node to be whatever prev is
+   * - Set prev to be the value of the node variable
+   * - Set the node variable to be the value of the next variable
+   */
+  reverse() {
+    let currentNode = this.head;
+    this.head = this.tail;
+    this.tail = currentNode; // Exchanging head and tail node
+    let nextNode = null;
+    let prevNode = null;
+    for (let i = 0; i < this.length; i++) {
+      nextNode = currentNode.next; // next node value is set to nextNode
+      currentNode.next = prevNode; // Previous Node value set to next Node value
+      prevNode = currentNode; // move on with next iteration, set the prev and current node values
+      currentNode = nextNode;
+    }
+    return this;
+  }
+
+  /**
+   * Helper method to view the items/node in the linked list
+   */
+  print() {
+    let arr = [];
+    let currentNode = this.head;
+    while (currentNode) {
+      arr.push(currentNode.value);
+      currentNode = currentNode.next;
+    }
+    console.log('********PRINTING LINKED LIST***********');
+    console.log(arr);
+    console.log('***************************************');
+  }
 }
 
 let list = new SinglyLinkedList();
@@ -284,3 +326,9 @@ console.log(JSON.stringify(list)); */
 console.log('NOde which got removed : ', JSON.stringify(list.remove(1).value));
 console.log('-');
 console.log(JSON.stringify(list)); */
+
+console.log('_________REVERSE__________');
+list.print();
+list.reverse();
+console.log('After Reverse Operation performed');
+list.print();
