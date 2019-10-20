@@ -171,6 +171,74 @@ class SinglyLinkedList {
     foundNode.value = newValue;
     return true;
   }
+  /**
+   * Insert pseudocode:
+   * - If the index is less than zero or greater than the length, return false
+   * - If the index is the same as the length , push a new node to the end of the list
+   * - If the index is 0, unshift a new node to the start of the list
+   * - Otherwise, using the get method, access the node at the (index-1)
+   * - Set the next property on that node to be the new node
+   * - Set the next property on the new node to be the previous next
+   * - Increment the length
+   * - Return true
+   */
+  insert(poistion, newNodeValue) {
+    if (poistion < 0 || poistion > this.length) {
+      return false;
+    }
+    if (poistion === this.length) {
+      this.push(newNodeValue);
+      return true;
+    }
+    if (poistion === 0) {
+      /*   this.unshift(newNodeValue);
+      return true; */
+      // !Above code can be written -> Using trughty technqiue
+      return !!this.unshift(newNodeValue);
+    }
+    let previousNode = this.get(poistion - 1);
+    let newNode = new Node(newNodeValue);
+    let temp = previousNode.next;
+
+    previousNode.next = newNode;
+    newNode.next = temp;
+    this.length++;
+    return true;
+  }
+
+  /**
+   * Remove pseudocode:
+   * - If the index is less than zero or greater than the length return undefined.
+   * - If the index is the same as the length-1, pop
+   * - If the index is 0, shift
+   * - Otherwise, using the get method, access the node at the index-1
+   * - Set the next property on that node to be the next of the next node.
+   * - Decrement the length
+   * - Return the value of the node removed
+   */
+
+  remove(poistion) {
+    if (poistion < 0 || poistion >= this.length) {
+      return undefined;
+    }
+    if (poistion === this.length - 1) {
+      this.pop();
+      return;
+    }
+    if (poistion === 0) {
+      this.shift();
+      return;
+    }
+    console.log('________________');
+    let previousNode = this.get(poistion - 1);
+    // console.log('Previous Node : ', previousNode);
+    let removedNode = previousNode.next;
+    // console.log('Removed NOde', removedNode);
+    previousNode.next = removedNode.next;
+    this.length--;
+    console.log('________________');
+    return removedNode;
+  }
 }
 
 let list = new SinglyLinkedList();
@@ -199,10 +267,20 @@ console.log(JSON.stringify(list)); */
 console.log(list.unshift('BROO'));
 console.log(JSON.stringify(list)); */
 
-console.log('_______GET_________');
+/* console.log('_______GET_________');
 console.log(list.get(2));
-console.log(list.get(4));
+console.log(list.get(4)); */
 
-console.log('___________SET__________');
+/* console.log('___________SET__________');
 console.log(list.set('I am usha Sabunkar', 2));
 console.log(JSON.stringify(list));
+ */
+
+/* console.log('____________INSERT_____________');
+list.insert(2, '888');
+console.log(JSON.stringify(list)); */
+
+/* console.log('________REMOVE_________');
+console.log('NOde which got removed : ', JSON.stringify(list.remove(1).value));
+console.log('-');
+console.log(JSON.stringify(list)); */

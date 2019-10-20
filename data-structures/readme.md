@@ -80,3 +80,5 @@ NOTE: Linked is good at insertion and deletion of the element in any position bc
 - Unshift : Adding a new node to the beginning of the linked list
 - Get : Retrieving a node by it's position in the linked list
 - Set : Changing the value of a node based on its position in the linked list
+- Insert : Adding a node to the linked list at a specific postion
+- Remove : Removing a node from the linked list at a specific position
