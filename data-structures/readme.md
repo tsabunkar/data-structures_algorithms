@@ -100,3 +100,19 @@ NOTE:
 - Access - O(n)
 
 ---
+
+# Doubly Linked List
+
+- This DS is almost identical to Singly Linked Lists, expect every node has another pointer to the previous node behind it.
+- ex :
+
+    <!-- !Doubly Linked Lists
+  
+      HEAD_____________________________________________TAIL
+       |                                               |
+      |                                               |
+  <*---4 --next---*> 6 --next---*> 8 --next---*> 2 --null--*>
+              <*----   <*---Prev--  <*---Prev--   
+    -->
+
+- Comparsion with Singly linked list, Doubly linked list uses More Memory and has More Flexibility

@@ -1,0 +1,23 @@
+{
+  "name": "ds_algorithm_js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsabunkar/ds_algorithm_js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tsabunkar/ds_algorithm_js/issues"
+  },
+  "homepage": "https://github.com/tsabunkar/ds_algorithm_js#readme",
+  "dependencies": {
+    "flatted": "^2.0.1"
+  }
+}
