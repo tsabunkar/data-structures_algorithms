@@ -41,6 +41,33 @@ class DoublyLinkedList {
     return this;
   }
 
+  /**
+   * Popping pseudocode:
+   * - If there is no head, retrun undefined
+   * - Store the current tail in a variable to return later
+   * - If the length is 1, set the head and tail to be null
+   * - Update the tail to be the previous Node
+   * - Set the newTail's next to null
+   * - Decrement the length
+   * - Return the value removed
+   */
+  pop() {
+    if (this.head === null || this.length === 0) {
+      return undefined;
+    }
+    let tailToBeRemoved = this.tail;
+    if (this.length === 1) {
+      this.head = null;
+      this.tail = null;
+    } else {
+      this.tail = tailToBeRemoved.prev;
+      this.tail.next = null;
+      tailToBeRemoved.prev = null; // old tail previous should be removed so that there is no connection at all
+    }
+    this.length--;
+    return tailToBeRemoved;
+  }
+
   print() {
     let currentNode = this.head;
     while (currentNode) {
@@ -56,4 +83,9 @@ doublyList.push(100);
 doublyList.push(2);
 // console.log(stringify(doublyList));
 
+console.log(doublyList.print());
+
+console.log('_________POP____________');
+
+console.log(doublyList.pop());
 console.log(doublyList.print());
