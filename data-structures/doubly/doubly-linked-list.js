@@ -181,6 +181,77 @@ class DoublyLinkedList {
     return false;
   }
 
+  /**
+   * Insert psuedocode:
+   * - If the index is less than zero or greater than or equal to the length return false
+   * - If the index is 0, unshift
+   * - If the index is the same as the length, push
+   * - Use the get method to access the index-1
+   * - Set the next and prev properties on the correct nodes to link everything together
+   * - Increment the length
+   * - Return true
+   */
+  insert(indexToInsert, valueToInsert) {
+    if (indexToInsert < 0 || indexToInsert > this.length) {
+      return false;
+    }
+    if (indexToInsert === 0) {
+      return !!this.unshift(valueToInsert);
+    }
+    if (indexToInsert === this.length) {
+      return !!this.push(valueToInsert);
+    }
+
+    let prevFoundNode = this.get(indexToInsert - 1);
+    let newNode = new Node(valueToInsert);
+    let afterNode = prevFoundNode.next;
+
+    prevFoundNode.next = newNode;
+    newNode.prev = prevFoundNode;
+
+    afterNode.prev = newNode;
+    newNode.next = afterNode;
+
+    this.length++;
+    return true;
+  }
+
+  /**
+   * Remove psuedocode :
+   * - If the index is less than zero or greater than or equal to the length return undefined
+   * - If the index is 0, shift
+   * - If the index is the same as the lenght-1, pop
+   * - Use the get method to retrieve the item to be removed
+   * - UPdate the next and prev properties to remove the found node from the list
+   * - Set next and prev to null on the found node
+   * - Decrement the length
+   * - return the removed node
+   */
+
+  remove(indexToRemove) {
+    if (indexToRemove < 0 || indexToRemove >= this.length) {
+      return undefined;
+    }
+    if (indexToRemove === 0) {
+      return this.shift();
+    }
+    if (indexToRemove === this.length - 1) {
+      return this.pop();
+    }
+    let nodeToRemove = this.get(indexToRemove);
+    let beforeNode = nodeToRemove.prev;
+    let afterNode = nodeToRemove.next;
+
+    beforeNode.next = afterNode;
+    afterNode.prev = beforeNode;
+
+    nodeToRemove.prev = null;
+    nodeToRemove.next = null;
+
+    this.length--;
+    return nodeToRemove;
+  }
+
   /**Display the doubly linked list */
   print() {
     let currentNode = this.head;
@@ -223,8 +294,18 @@ console.log(doublyList.print());
 
 console.log(doublyList.get(1)); */
 
-console.log('________SET__________');
+/* console.log('________SET__________');
 
 console.log(doublyList.set(2, 344));
 console.log(doublyList.print());
-console.log(doublyList.get(2));
+console.log(doublyList.get(2)); */
+
+/* console.log('________INSERT__________');
+console.log(doublyList.insert(2, 344));
+console.log(doublyList.print());
+ */
+
+/* console.log('________REMOVE__________');
+console.log(doublyList.remove(2));
+console.log(doublyList.print());
+ */
