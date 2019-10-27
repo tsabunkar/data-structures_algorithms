@@ -130,6 +130,58 @@ class DoublyLinkedList {
     return this;
   }
 
+  /**
+   * Get pseudocode:
+   * - If the index is less than 0 or greater or equal to the length , return null
+   * - If the index is less than or equal to half the length of the list
+   *  - Loop thorugh the list starting from the head and loop towards the middle
+   *  - Return the node once it is found
+   * - If the index is greater than half the length of the list
+   *  - Loop through the list starting from the tail and loop towards the middle
+   *  - Return the node once it is found
+   */
+  get(indexToFind) {
+    if (indexToFind < 0 || indexToFind >= this.length) {
+      return null;
+    }
+
+    if (indexToFind <= this.length / 2) {
+      let counter = 0;
+      let currentHead = this.head;
+      while (counter !== indexToFind) {
+        counter++;
+        currentHead = currentHead.next;
+      }
+      return currentHead;
+    } else {
+      let counter = this.length - 1;
+      let currentTail = this.tail;
+      while (counter !== indexToFind) {
+        counter--;
+        currentTail = currentTail.prev;
+      }
+      return currentTail;
+    }
+  }
+
+  /**
+   * Set pseudocode:
+   * - Create a variable which is the result of the get method at the index passed to the function
+   * - If the get method return a valid node, set the value of that node to be the value passed to the func
+   * - Return true
+   * - Otherwise return false
+   */
+
+  set(index, newValue) {
+    let foundNode = this.get(index);
+    if (foundNode) {
+      foundNode.value = newValue;
+      return true;
+    }
+    return false;
+  }
+
+  /**Display the doubly linked list */
   print() {
     let currentNode = this.head;
     while (currentNode) {
@@ -142,7 +194,9 @@ class DoublyLinkedList {
 let doublyList = new DoublyLinkedList();
 doublyList.push(48);
 doublyList.push(100);
-doublyList.push(2);
+doublyList.push(22);
+doublyList.push(56);
+doublyList.push(77);
 // console.log(stringify(doublyList));
 
 console.log(doublyList.print());
@@ -158,8 +212,19 @@ console.log(doublyList.shift());
 console.log('----');
 console.log(doublyList.print()); */
 
-console.log('________UNSHIFT__________');
+/* console.log('________UNSHIFT__________');
 
 console.log(doublyList.unshift(45));
 console.log('----');
 console.log(doublyList.print());
+ */
+
+/* console.log('________GET__________');
+
+console.log(doublyList.get(1)); */
+
+console.log('________SET__________');
+
+console.log(doublyList.set(2, 344));
+console.log(doublyList.print());
+console.log(doublyList.get(2));
