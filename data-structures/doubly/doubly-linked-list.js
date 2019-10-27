@@ -97,6 +97,39 @@ class DoublyLinkedList {
     return oldHead;
   }
 
+  /**
+   * Unshift pusedocode:
+   * - Create a new node with the value passed to the func
+   * - If the length is 0
+   *  - Set the head to be new Node
+   *  - Set the tail to be new node
+   * - Otherwise
+   *  - Set the prev property on the head of the list to be the new node
+   *  - Set the next property on the new node to be the head property
+   *  - Update the head to be the new node
+   * - Increment the length
+   * - Return the list
+   */
+
+  unshift(newNodeValue) {
+    let node = new Node(newNodeValue);
+    if (this.length === 0) {
+      this.head = this.tail = node;
+    } else {
+      /*  let oldHead = this.head;
+      this.head = node;
+      this.head.next = oldHead;
+      this.head.prev = null;
+      oldHead.prev = this.head; */
+      // ------or------
+      this.head.prev = node;
+      node.next = this.head;
+      this.head = node;
+    }
+    this.length++;
+    return this;
+  }
+
   print() {
     let currentNode = this.head;
     while (currentNode) {
@@ -119,8 +152,14 @@ console.log(doublyList.print());
 console.log(doublyList.pop());
 console.log(doublyList.print()); */
 
-console.log('________SHIFT__________');
+/* console.log('________SHIFT__________');
 
 console.log(doublyList.shift());
+console.log('----');
+console.log(doublyList.print()); */
+
+console.log('________UNSHIFT__________');
+
+console.log(doublyList.unshift(45));
 console.log('----');
 console.log(doublyList.print());
