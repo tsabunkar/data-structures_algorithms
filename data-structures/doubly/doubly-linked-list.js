@@ -68,6 +68,35 @@ class DoublyLinkedList {
     return tailToBeRemoved;
   }
 
+  /**
+   * Shift pseudocode :
+   * - If the length is 0, return undefined
+   * - Store the current head property in a variable (we'll call it old head)
+   * - If the length is one
+   *    - Set the head and tail to be null
+   * - Update the head to be the next of the old head
+   * - Set the head's prev property to null
+   * - Set the old head's next to null
+   * - Decrement the length
+   * - Return old head
+   */
+  shift() {
+    if (this.length === 0) {
+      return undefined;
+    }
+    let oldHead = this.head;
+    if (this.length === 1) {
+      this.head = null;
+      this.tail = null;
+    } else {
+      this.head = oldHead.next;
+      this.head.prev = null;
+      oldHead.next = null;
+    }
+    this.length--;
+    return oldHead;
+  }
+
   print() {
     let currentNode = this.head;
     while (currentNode) {
@@ -85,7 +114,13 @@ doublyList.push(2);
 
 console.log(doublyList.print());
 
-console.log('_________POP____________');
+/* console.log('_________POP____________');
 
 console.log(doublyList.pop());
+console.log(doublyList.print()); */
+
+console.log('________SHIFT__________');
+
+console.log(doublyList.shift());
+console.log('----');
 console.log(doublyList.print());
