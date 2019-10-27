@@ -134,7 +134,7 @@ NOTE:
 
 # Stack
 
-- Stack is LIFO (Last in first out) data-structure
+- Stack is LIFO (Last in first out) data-structure where the last value in is always the first one out
 - The last element added to the stack will be the first element removed from the stack
 - Ex Think about a stack of plates, or a stack of books or stack of maerkers (As you pile it up the last thing or topmost thing is what gets removed first)
 - ex
@@ -148,6 +148,7 @@ NOTE:
 - Implementing Stack using Array and -> shift&unshift is not efficient way bcoz the time-complexity increase as re-indexing happens when We Add/unshift the element (or) remove/shift the element in the array
 - Therefore we can use push&pop for implementing Stack using Array rather than shift&unshift
 - Thus, Stack only says to follow LIFO Pricipal no need to of indices which is present in Arrays so we can also implement stack using Singly Linked List or Doubly Linked List
+- Stack are not built in data structure in JS, but are relatively simply to implement
 
 ---
 
