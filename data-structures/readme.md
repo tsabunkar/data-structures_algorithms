@@ -116,3 +116,18 @@ NOTE:
     -->
 
 - Comparsion with Singly linked list, Doubly linked list uses More Memory and has More Flexibility
+- Doubly linked list are almost identical to Singly Linked List except there is an additional pointer to the previous nodes.
+- Best ex- is browser which has next and previous of the current page which we are browsing
+- Better than singly linked lists for finding nodes and can be done in half the time
+- However, they do take up more memory considering the extra pointer
+
+---
+
+# Big O of Doubly Linked List
+
+- Insert : O(1) [ push,Unshift ]
+- Removal - O(1) [ Shift, Pop ]
+- Search - O(n) [ Get ] ( but techincally searching is O(n/2) but that's still O(n) )
+- Access - O(n)
+
+---
