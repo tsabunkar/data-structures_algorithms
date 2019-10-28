@@ -72,6 +72,7 @@ let stack = new Stack();
 console.log(stack.push('Harry'));
 console.log(stack.push('Hermoine'));
 console.log(stack.push('Ron'));
+console.log(stack.push('lord Voldamote'));
 
 console.log(JSON.stringify(stack));
 

@@ -150,6 +150,8 @@ NOTE:
 - Thus, Stack only says to follow LIFO Pricipal no need to of indices which is present in Arrays so we can also implement stack using Singly Linked List or Doubly Linked List
 - Stack are not built in data structure in JS, but are relatively simply to implement
 
+- NOTE : In the array if you add/remove element at the end then there is NO PROBLEM, but if your adding/removing element from the begining then re-indexing problem occurs
+
 ---
 
 # Big O of Stack
@@ -160,3 +162,10 @@ NOTE:
 - Access - O(n)
 
 ---
+
+# Queue
+
+- Queue is a FIFO(First In First Out) data structure
+- Think of line or queue waiting for movie tickets
+- When user log in for online game like pubg he will be waiting in the queue, Background task in the computer for ex- downloading mulitple files from the internet if they are in same size happens in the queue or uploading resources
+- Printing/Task processing (Printing pages in printer)
