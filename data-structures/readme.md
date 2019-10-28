@@ -169,3 +169,12 @@ NOTE:
 - Think of line or queue waiting for movie tickets
 - When user log in for online game like pubg he will be waiting in the queue, Background task in the computer for ex- downloading mulitple files from the internet if they are in same size happens in the queue or uploading resources
 - Printing/Task processing (Printing pages in printer)
+
+---
+
+# Big O of Queue
+
+- Insert : O(1)
+- Removal - O(1)
+- Search - O(n)
+- Access - O(n)
