@@ -178,3 +178,48 @@ NOTE:
 - Removal - O(1)
 - Search - O(n)
 - Access - O(n)
+
+---
+
+# Trees
+
+- Tree is a data-structure that consits of nodes in a parent/child relationship
+- We have branches from one node which connect to another node or nodes, hence this branching structure so called ad ===> Tree
+- Actual Tree is bottom-up where as This DS Tree is Top-Down Vizually
+- NOde can store any type of data - number, string, Arrays, etc
+- First Node is called as ===> Root Node
+-     <!--
+
+  <!--! TREES
+
+            2 (Root Node)
+         / |  \
+       45  27 13
+              / \
+             /   \
+           65    34
+
+   -->
+
+  -->
+
+- Lists are linear (means next, next,.. in linear fashion or straight line fashion, Have only one path)
+- Trees are non-linear (means there are lot of branches, so more than one pathways)
+- A singly likes list can be considered as special code of a tree
+- Thumb rule : A parent node should only point to its child node.
+- Child node cannot point to parent node, A node cannot point to sibling node, Cannot have two Root Nodes/ two begining points
+
+- Root : is the top node in a tree
+- Child : A node dirctly connected to another node when moving away from the Root
+- Parent : The converse notion of a child
+- Siblings : A group of nodes with the same parent
+- Leaf : A node with no children
+- Edge : The connection between one node and another (Connection between one node and another node, its the arrow from parent node to child node)
+- Trees Example:
+  - HTML DOM elements
+  - Network Routing
+  - Abstract Syntax Tree
+  - Artifical Intelligence (Miny-max Tree)
+  - folder structure in Operating System
+  - Computer File System
+  - JSON
