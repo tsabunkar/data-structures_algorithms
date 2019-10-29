@@ -94,7 +94,7 @@ NOTE:
 
 # Big O of Singly Linked List
 
-- Insert : O(1) [ push,Unshift ]
+- Insert - O(1) [ push,Unshift ]
 - Removal - Depends ==> O(1) or O(n) [ Shift -> O(1) , Pop -> O(n) ]
 - Search - O(n) [ Get ]
 - Access - O(n)
@@ -125,7 +125,7 @@ NOTE:
 
 # Big O of Doubly Linked List
 
-- Insert : O(1) [ push,Unshift ]
+- Insert - O(1) [ push,Unshift ]
 - Removal - O(1) [ Shift, Pop ]
 - Search - O(n) [ Get ] ( but techincally searching is O(n/2) but that's still O(n) )
 - Access - O(n)
@@ -156,7 +156,7 @@ NOTE:
 
 # Big O of Stack
 
-- Insert : O(1)
+- Insert - O(1)
 - Removal - O(1)
 - Search - O(n)
 - Access - O(n)
@@ -174,7 +174,7 @@ NOTE:
 
 # Big O of Queue
 
-- Insert : O(1)
+- Insert - O(1)
 - Removal - O(1)
 - Search - O(n)
 - Access - O(n)
@@ -247,5 +247,13 @@ NOTE:
 - Every parent node has at most two children
 - Every node to the left of parent node is always less than parent
 - Every node to the right of parent node is always greater than parent
+
+---
+
+# Big O of BST
+
+- Insert - O(log(n))
+- Search - O(log(n))
+  [*Not Graunteed]
 
 ---
