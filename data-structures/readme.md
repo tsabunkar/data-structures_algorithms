@@ -257,3 +257,15 @@ NOTE:
   [*Not Graunteed]
 
 ---
+
+# Tree Traversal
+
+- Given any tree how we will visit every node onces
+- For a traversing a tree we have different approaches, Two common ways are :
+  - Breadth-first Search (BFS)
+  - Depth-first Search (DFS)
+- Breadth-first Search : Traversing the Node horizontally from left to Right ( Remeber: Breath of Tree)
+- Depth-first Search : Traversing the Node Vertically from top to down
+  - DFS-InOrder
+  - DFS-PreOrder
+  - DFS-PostOrder
