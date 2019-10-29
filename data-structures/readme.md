@@ -223,3 +223,29 @@ NOTE:
   - folder structure in Operating System
   - Computer File System
   - JSON
+
+---
+
+# Kinds of Trees
+
+- Trees
+- Binary Tree
+- Binary Search Trees (BST)
+
+---
+
+# Binary Tree
+
+- Each node can have atmost two children nodes (which means it can be 2 child, 1 child or 0 child)
+
+---
+
+# Binary Seach Tree (BST)
+
+- It is the type of Binary Tree ( Special code of Binary Tree )
+- BST works for Sorted data
+- Every parent node has at most two children
+- Every node to the left of parent node is always less than parent
+- Every node to the right of parent node is always greater than parent
+
+---
