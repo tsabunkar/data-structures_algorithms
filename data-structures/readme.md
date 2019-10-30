@@ -321,9 +321,73 @@ NOTE:
 
 ---
 
+# Conclusion of Trees
+
 - Trees are non-linear data structures that contain a root and child nodes
 - Binary Trees can have values of any type, but at most two children for each parent
 - Binary Search Trees are a more specific version of binary trees where every node to the left of a parent is less than it's value and every node to the right is greater
 - We can search through trees using BFS and DFS
+
+---
+
+# Heaps
+
+- Different Types of Trees are - Binary Trees, Heaps, etc
+- Heaps are another category of Trees
+- All the rules that applies to Trees in general are applied to Heaps, but there are additional rules in heaps
+- Heaps are further classified into : Heap, Binary Heap, Fibonacci heap, min heap, max heap, etc
+
+---
+
+# Binary Heaps
+
+- It is sub-category of heaps, which in-turn is a category of Trees
+- Binary heaps: is very similar to a binary search tree, but with some different rules!
+
+- MaxBinaryHeap :
+
+  - Parent nodes are always larger than child nodes
+
+    <!--! MaxBinaryHeap
+               41
+             /   \
+           /      \
+         29       33
+       /  \       / \
+      /    \    /    \
+    18     27  12    30
+
+     -->
+
+  -->
+
+  - Each parent has at-most two child nodes
+  - The value of each parent node is always greater than its child nodes
+  - In a max binary heap the parent is greater than the children, but there are no guarantees between sibling nodes
+  - A binary heap is as compact as possible. All the children of each node are as full as they
+    can be and left chidlrenm are filled out first
+
+- MinBinaryHeap : Parent nodes are always smaller than child nodes
+
+    <!--! MinBinaryHeap
+               1
+             /   \
+           /      \
+         2         3
+       /  \       / \
+      /    \    /    \
+    18     27  12    24
+   /  \
+  25  100 
+     -->
+
+  -->
+
+---
+
+# Why do we learn about Binary Heaps ?
+
+- Binary Heaps are used to implement Pirority Queues, which are very commonly used data structures
+- They are also used quite a bit, with GRAPH TRAVERSAL Algorithms
 
 ---
