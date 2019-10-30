@@ -61,13 +61,16 @@ class BinarySearchTree {
     let currentNode = this.root;
 
     function traverse(node) {
-      if (node.left) {
+      /* if (node.left) {
         traverse(node.left);
-      }
+      } */
+      // !or
+      node.left && traverse(node.left);
       nodesVisited.push(node.value);
-      if (node.right) {
+      /* if (node.right) {
         traverse(node.right);
-      }
+      } */
+      node.right && traverse(node.right);
     }
     traverse(currentNode);
 
