@@ -402,4 +402,4 @@ NOTE:
 - Check Image @ trees/heaps/storing-heaps.png
 - To find parent node, for given child node index formula :
   - For any child node at index : n
-  - Its parent is at index : (n-1)/2
+  - Its parent is at index : (n-1)/2 [ Floored ]
