@@ -391,3 +391,15 @@ NOTE:
 - They are also used quite a bit, with GRAPH TRAVERSAL Algorithms
 
 ---
+
+# Max Binary Heaps
+
+- We can store the heaps in an array
+- To find the child of particular parent node formula :
+  - For any index of an array : n
+  - The left child is stored at : (2n+1)
+  - The right child is stored at : (2n+2)
+- Check Image @ trees/heaps/storing-heaps.png
+- To find parent node, for given child node index formula :
+  - For any child node at index : n
+  - Its parent is at index : (n-1)/2
