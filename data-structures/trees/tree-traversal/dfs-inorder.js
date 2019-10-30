@@ -45,18 +45,18 @@ class BinarySearchTree {
   }
 
   /**
-   * ! dfs-postorder pseudocode:
+   * ! dfs-inorder pseudocode:
    * - Create a variable to store the values of nodes visited
    * - Store the root of the BST in a variable called current
    * - Write a helper function which accepts a node
    *     - If the node has a left property, call the helper function with the left property on the node
-   *     - If the node has a right property, call the helper function with the right property on the node
    *     - Push the value of the node to the variable that stores the values
+   *     - If the node has a right property, call the helper function with the right property on the node
    * - Invoke the helper function with the current variable
    * - Return the array of values
    */
 
-  dfsPostOrder() {
+  dfsInOrder() {
     let nodesVisited = [];
     let currentNode = this.root;
 
@@ -64,11 +64,10 @@ class BinarySearchTree {
       if (node.left) {
         traverse(node.left);
       }
+      nodesVisited.push(node.value);
       if (node.right) {
         traverse(node.right);
       }
-
-      nodesVisited.push(node.value);
     }
     traverse(currentNode);
 
@@ -92,6 +91,6 @@ bst.insert(20);
 
 // console.log(JSON.stringify(bst, undefined, 2));
 
-console.log('___________DFS POST-ORDER____________');
+console.log('___________DFS In-ORDER____________');
 
-console.log(bst.dfsPostOrder()); // [ 3, 8, 6, 20, 17, 15, 10 ]
+console.log(bst.dfsInOrder()); // [ 3, 6, 8, 10, 15, 17, 20 ]
