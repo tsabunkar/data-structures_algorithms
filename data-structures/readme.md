@@ -295,3 +295,35 @@ NOTE:
       3  8   17   20
       -->
   - output :- [ 3, 8, 6, 20, 17, 15, 10 ]
+
+- DFS-Inorder :
+  - Traverse vertically top to down
+  - Traverse the complete left and then push to visited list, later from that parent node itself traverse the complete right
+  - <!--
+            10
+        6       15
+      3  8   17   20
+      -->
+  - output :- [ 3, 6, 8, 10, 15, 17, 20 ]
+
+---
+
+# Which Traverse technique (BFS or DFS) to use when ?
+
+- If we have losts of nodes to keep track of ---use---> BFS
+- If we have fewer nodes to keep track of ---use----> DFS
+- Both DFS and BFS has same Time complexity (Every node is visited onces), but defintely space compexity varies
+
+## When to use what in DFS Inorder, preorder, postorder
+
+- DFS-Inorder ==> Result traverse output is in sorted ascending order, Thus we get all nodes in the tree in their underlying order
+- DFS-Preorder ===> If we want to clone or duplicate the tree or store the tree in db, Thus can be used to 'export' a tree structure so that it is easily re-constructed or copied
+
+---
+
+- Trees are non-linear data structures that contain a root and child nodes
+- Binary Trees can have values of any type, but at most two children for each parent
+- Binary Search Trees are a more specific version of binary trees where every node to the left of a parent is less than it's value and every node to the right is greater
+- We can search through trees using BFS and DFS
+
+---
