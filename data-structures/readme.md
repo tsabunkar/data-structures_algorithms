@@ -265,7 +265,33 @@ NOTE:
   - Breadth-first Search (BFS)
   - Depth-first Search (DFS)
 - Breadth-first Search : Traversing the Node horizontally from left to Right ( Remeber: Breath of Tree)
+
 - Depth-first Search : Traversing the Node Vertically from top to down
-  - DFS-InOrder
+
   - DFS-PreOrder
   - DFS-PostOrder
+  - DFS-InOrder
+
+- DFS-Preorder : Traverse vertically top to down, First we traverse to the left edge from it parent node and then traverse to its right edge
+
+  - <!--
+            10
+        6       15
+      3  8   17   20
+      -->
+  - output :- [ 10, 6, 3, 8, 15, 17, 20 ]
+
+- DFS-Postorder :
+
+  - Traverse vertically top to down
+  - Post order ==> (Post : After) -> We visit the node after we looked left and the right.
+  - First we traverse to complete left and then push to visited list from its parent node, traverse to the complete right and then push to visisted list.
+  - We explore all the children node then its parent node
+  - root node is the last pushed node to the visited list.
+
+  - <!--
+            10
+        6       15
+      3  8   17   20
+      -->
+  - output :- [ 3, 8, 6, 20, 17, 15, 10 ]
