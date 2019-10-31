@@ -403,3 +403,10 @@ NOTE:
 - To find parent node, for given child node index formula :
   - For any child node at index : n
   - Its parent is at index : (n-1)/2 [ Floored ]
+- Adding/Inseting to MaxBinaryHeap : (2 rules)
+  - Add to the end
+  - Bubble up (to its correct position)
+- Extracting/Removing the Max value from MaxBinaryHeap : (3 rules)
+  - Replace the root (max value) with most recently added
+  - Pop-out/Remove the root
+  - Bubble up (to its correct position)
