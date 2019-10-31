@@ -437,3 +437,91 @@ NOTE:
 - Search - O(n) [ Techincally - O(n/2) = O(n) ]
 
 ---
+
+# Hash Tables
+
+- Hash Tables is data structure which is also called as ==> Hash Map
+- Default type Built-in in most of the languages like - java, js, python
+- What is hash Table ?
+  - Hash Tables are used to store (key : value) pairs
+  - They are like arrays, but the keys are not ordered
+  - In Arrays, keys are always numeric order from 0, where as in hash table it can be string, number
+  - Unlike arrays, hash tables are fast -> For all of the following operations : finding values, Adding new value and removing value
+- Why Should I care about Hash table ?
+  - Nearly every programming language has some sort of hash table data structure for ex :
+    - Python : Dictionaries
+    - JS : Objects and Maps
+    - Java, Go and Scala : Maps
+    - Ruby : Hashes
+  - Because of Speed, hash tables are very commonly used
+- Hash tables are used when we dont want to store the element in order
+
+---
+
+# Implementing your own hash table
+
+- To implement a hash table, we'll be using an array
+- In order to look up values by key, we need a way to convert keys into valid array indices ===> Thus A function that performs this task is called 'hash function'
+- Hashing function is a function which takes input as the key (which can be string, number, etc) and consistently gives output as the number(indices of Array) for that key passed
+
+---
+
+# Hash Function
+
+- A hash function is any function that can be used to map data of arbitrary size to fixed-size values
+- The values are used to index a fixed-size table called a hash table.
+- Use of a hash function to index a hash table is called hashing or scatter storage addressing.
+- Hash functions are used - secure data, store data, authentication, crypto currency, cryptographic hash function
+- A function which takes input as -> arbitrary size and gives output of -> fixed size
+- In java if you print the object without overriding the toString() method -> It prints hash Values, These HashValues are random Values which are encyrpted/hashed, These output hashed Values cannot be used to get back the input passed. Thus its one-way hashing/encrypting
+- What makes a good hash function (Not cryptographically secured one)?
+  - Fast (i.e- constant time)
+  - Doesn't cluster outputs at specific indices, but distributes uniformly ( Random is wrong word, just to make u understand)
+  - Deterministic (Same input must yields same output)
+
+---
+
+# Dealing with Collisions
+
+- Even a large array and a great hash function, collisions are inventiable/un-avoidable
+- There are many strategies for dealing with collisions, but let us focus on two:
+  - Separate Chaining
+  - Linear Probing
+- Separate Chaining :
+  - With separate chaining, at each index in our array we store values using a more sophisticated data structure (ex - An array or a linked list).
+  - This allow us to store multiple key-value pairs at the same index
+    <!--
+      0 1 2 3 4 5 6 7 8 9
+     [ , , , , , , , , , ]
+              |
+             |
+          [
+           ['darkblue', '#0008b'],
+           ['salmon', '#fa8072']
+         ]
+
+
+         darkblue  ===>  4
+         salmon    ===>  4
+    -->
+
+- Linear Probing :
+  - With linear probing, when we find a collision, we search through the array to find the next empty slot
+  - Unlike with separate chaining, this allows us to store a single key-value at each index
+
+<!--
+      0 1 2 3 4 5 6 7 8 9
+     [ , , , , , , , , , ]
+              | |
+             | |
+            | |
+           |['salmon', '#fa8072']
+          |
+    ['darkblue', '#0008b']
+
+
+         darkblue  ===>  4
+         salmon    ===>  4
+    -->
+
+---
