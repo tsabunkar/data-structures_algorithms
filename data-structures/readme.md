@@ -336,6 +336,7 @@ NOTE:
 - Heaps are another category of Trees
 - All the rules that applies to Trees in general are applied to Heaps, but there are additional rules in heaps
 - Heaps are further classified into : Heap, Binary Heap, Fibonacci heap, min heap, max heap, etc
+- A heap is alway filled out from left to right
 
 ---
 
@@ -343,6 +344,8 @@ NOTE:
 
 - It is sub-category of heaps, which in-turn is a category of Trees
 - Binary heaps: is very similar to a binary search tree, but with some different rules!
+- Binary Heaps are useful data structures for sorting, and implementing other data structures like priority queues
+- Binary Heaps are either MaxBinaryHeaps or MinBinaryHeaps with parents either being smaller or larger than their children nodes
 
 - MaxBinaryHeap :
 
@@ -424,5 +427,13 @@ NOTE:
     Now iterate over the entier elements to find the highes priority element.
   - But we can use HEAP :) ==> Time Complexity : O(log(n))
 - example implemented for Priority Queue using ===> MinBinaryHeap
+
+---
+
+# Big O of Binary Heaps
+
+- Insert - O(log(n))
+- Removal - O(log(n))
+- Search - O(n) [ Techincally - O(n/2) = O(n) ]
 
 ---
