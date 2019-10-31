@@ -410,3 +410,19 @@ NOTE:
   - Replace the root (max value) with most recently added
   - Pop-out/Remove the root
   - Bubble up (to its correct position)
+
+---
+
+# Priority Queue
+
+- A data structure where each element has a priority. Element with higher priorities are served before elements with lower priorities
+- Ex- Unix Machine has differnet process where each process has priorities/nice
+- Priority Queue is a concept which can be implement with -> List, arrays, heap, etc
+- Old/naive solution of implementing Priority Queue is :
+  - Use a list to store all elements ==> Time Complexity : O(n)
+    [p3, p1, p2, p5, p4]
+    Now iterate over the entier elements to find the highes priority element.
+  - But we can use HEAP :) ==> Time Complexity : O(log(n))
+- example implemented for Priority Queue using ===> MinBinaryHeap
+
+---

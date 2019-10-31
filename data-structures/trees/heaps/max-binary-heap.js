@@ -31,7 +31,7 @@ class MaxBinaryHeap {
     let index = this.values.length - 1;
     const nodeToBubbleUpVal = this.values[index];
 
-    while (true) {
+    while (index > 0) {
       let parentIndex = Math.floor((index - 1) / 2);
       let parentVal = this.values[parentIndex];
       if (nodeToBubbleUpVal > parentVal) {
@@ -89,6 +89,11 @@ class MaxBinaryHeap {
       let rightChildVal;
       if (rightChildIndex < this.values.length) {
         rightChildVal = this.values[rightChildIndex];
+      }
+
+      if (!leftChildVal || !rightChildVal) {
+        // checking for undefined
+        break;
       }
 
       let largestChildVal = Math.max(leftChildVal, rightChildVal);
