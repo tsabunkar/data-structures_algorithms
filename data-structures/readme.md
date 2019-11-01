@@ -542,3 +542,52 @@ NOTE:
 - Search/Access - O(1)
 
 ---
+
+# Graphs
+
+- Graphs are used in Netflix, youtube recommendation
+- Graphs does not means the charts
+- A graph data structure consists of a finite (and possibly mutable) set of vertices or nodes or points, together with a set of unordered pairs of these vertices of an undirected graph or a set of ordered pairs for a directed graph
+- Graph is the collection of nodes and connection between those nodes
+- Graph = Nodes + connections
+- Tree is a type of graph itelf ( A tree is an undirected graph, In which any two vertices are connected by exactly only one path. Every acyclic conected graph is a tree)
+- Uses for Graphs :
+  - Social Networks
+  - Web page linked to another page - Internet itself is a Graph
+  - Location / Mapping
+  - Routing Algorithms
+  - Visual Hierarchy
+  - File System Optimizations
+  - Recommendations Engines ( People also watched, you might also like, people you might know, frequently bought with )
+- Terms used in Graph :
+  - Vertex : Node
+  - Edge : Connection between nodes
+  - Weighted/Unweighted : Values assigned to distances between vertices
+  - Directed/Undirected : Directions assigned to distance between vertices
+
+---
+
+# Types of Graphs
+
+- Directed v/s Undirected Graph :
+
+  - Undirected Graph:
+    - There is no direction/polarity to the edges
+    - Kind of two way connection
+    - Ex- Facebook friends is a undirected graph, two friends (node) are connected to each other so that both can view each others profile
+  - Directed Graph:
+    - There is direction/polarity to the edges
+    - one way or two way traversal possible
+    - Ex- Instagram Followers is a directed graph, where fan can only follow celebraity
+
+- Weighted v/s Unweighted Graph :
+
+  - Weighted Graph:
+    - Values are assigned to the edges
+    - Information about the connection/edges are present
+    - Ex- Google maps is weighted graph, as it shows the distance on the edges from one node to another node
+  - Unweighted Graph:
+    - Values are not assigned to the edges
+    - Information about the connection/edge are not present
+
+---
