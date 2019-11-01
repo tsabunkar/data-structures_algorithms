@@ -528,3 +528,11 @@ NOTE:
     -->
 
 ---
+
+# Big O of Hash Tables
+
+- Insert - O(1)
+- Removal/Deletion - O(1)
+- Search/Access - O(1)
+
+---
