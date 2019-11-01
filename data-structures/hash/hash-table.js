@@ -23,8 +23,12 @@ class HashTable {
    * - Stores the key-value pair in the hash table array via separate chaining
    */
   set(key, value) {
+    if (typeof key !== 'string') {
+      return 'Key must be of type string';
+    }
+
     let index = this.hash(key); // Index is to store the element in Array
-    console.log(index);
+
     if (!this.keyMapArray[index]) {
       // If there is no element in that index position
       this.keyMapArray[index] = [];
@@ -71,14 +75,53 @@ class HashTable {
     }
     return undefined;
   }
+
+  /**
+   * keys psuedocode:
+   * - Loops through the hash table array and returns an array of keys in the table
+   */
+  keys() {
+    return this.traversal(0);
+  }
+
+  /**
+   * Values psuedocode
+   * - Loops through the hash table array and returns an array of Values in the table
+   */
+  values() {
+    return this.traversal(1);
+  }
+
+  traversal(index) {
+    let keyList = [];
+    this.keyMapArray.forEach(innerArrayElement => {
+      if (innerArrayElement) {
+        innerArrayElement.forEach(element => {
+          keyList.push(element[index]);
+        });
+      }
+    });
+    return keyList;
+  }
 }
 
 let hashTable = new HashTable();
 hashTable.set('rajma', 'Chawal');
 hashTable.set('Lalchola', 'bathora');
 hashTable.set('dal', 'kichidi');
-// console.log(hashTable.keyMapArray);
-console.log('--------------------------------');
 
+console.log('-------------SET-------------------');
+console.log(hashTable.keyMapArray);
+
+console.log('--------------GET------------------');
 console.log(hashTable.get('dal'));
-console.log(hashTable.get2('dal'));
+
+console.log('--------------KEYS------------------');
+console.log(hashTable.keys());
+
+console.log('--------------VALUES------------------');
+console.log(hashTable.values());
+
+// !Handling Duplication (NOTE: Keys should be unique but values can be duplicated)
+hashTable.set('dal', 'Vada');
+console.log(hashTable.values());
