@@ -495,14 +495,16 @@ NOTE:
      [ , , , , , , , , , ]
               |
              |
-          [
+          {}
            ['darkblue', '#0008b'],
            ['salmon', '#fa8072']
-         ]
+         }
 
 
          darkblue  ===>  4
          salmon    ===>  4
+      (If we have collision of ouptut/ Same output then we will store both the keys as array inside
+      another array/list)
     -->
 
 - Linear Probing :
@@ -522,6 +524,7 @@ NOTE:
 
          darkblue  ===>  4
          salmon    ===>  4
+          (If we have collision of ouptut/ Same output then we will store the next ouput, immeditaley into the next element)
     -->
 
 ---
