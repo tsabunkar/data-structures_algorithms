@@ -591,3 +591,50 @@ NOTE:
     - Information about the connection/edge are not present
 
 ---
+
+# Storing Graphs
+
+- Graph can be stored using
+  - Adjacency matrix
+  - Adjacency list
+- matrix- 2 Dimensionals which are implemented using arrays, which stores using rows and columns
+- Adjacency matrix ->
+  - Uses Matrix
+  - Takes up more space (in sparse graphs- Lot of connection/edges in a graph)
+  - Slower to iterate over all edges
+  - Faster to lookup specific edge
+- Adjacency list ->
+  - Uses List/Array or HashTables/Map
+  - Can take up less space (in sparse graph)
+  - Faster to iterate over all edges
+  - Can be slower to lookup specific edge
+
+---
+
+# Big O of Adjacency List and Adjacency Matrix
+
+- Let, V ==> nuber of vertices and E ==> number of edges
+- Operations
+
+  - Add Vertex :
+    - Adjacency List => O(1)
+    - Adjacency Matrix => O(V^2)
+  - Add Edge :
+    - Adjacency List => O(1)
+    - Adjacency Matrix => O(1)
+  - Remove Vertex :
+    - Adjacency List => O(|V| + |E|)
+    - Adjacency Matrix => O(|V^2|)
+  - Remove Edge :
+    - Adjacency List => O(|E|)
+    - Adjacency Matrix => O(1)
+  - Query :
+    - Adjacency List => O(|V| + |E|)
+    - Adjacency Matrix => O(1)
+  - Storage :
+    - Adjacency List => O(|V| + |E|)
+    - Adjacency Matrix => O(|V^2|)
+
+- What we will use ? ==> Adjacency List , bcoz most data in the real-world trends to lend itself to sparser graphs (i.e- larger graphs, too many edges/connections and nodes )
+
+---
