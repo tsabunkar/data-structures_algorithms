@@ -638,3 +638,22 @@ NOTE:
 - What we will use ? ==> Adjacency List , bcoz most data in the real-world trends to lend itself to sparser graphs (i.e- larger graphs, too many edges/connections and nodes )
 
 ---
+
+# Graph Traversal
+
+- Visiting/Updating/Checking each vertex in a graph
+- There is no root in Traveral, So we need to specifiy the starting point
+- For any node in a graph, there can be muliple path to traverse
+- Graph Traversal Uses:
+  - Peer to peer networking
+  - Web crawlers
+  - Finding 'closest' match/recommendations
+  - Shortest path problems
+    - GPS Navigation
+    - Solving mazes
+    - A.I (Shortest path to win the game)
+- We could do, Traversal of graph's using BFS (Breadth First Search) and DFS (Depth First Search)
+- DFS Traversal : From Starting point node, go to any of the neighobour node, then visit all this neighobour nodes neighobour...
+- BFS Traversal : From Starting point node, go to neighobour node, then come back to parent node and finisih the other neighobour nodes,..
+
+---
