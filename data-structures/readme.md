@@ -655,5 +655,6 @@ NOTE:
 - We could do, Traversal of graph's using BFS (Breadth First Search) and DFS (Depth First Search)
 - DFS Traversal : From Starting point node, go to any of the neighobour node, then visit all this neighobour nodes neighobour...
 - BFS Traversal : From Starting point node, go to neighobour node, then come back to parent node and finisih the other neighobour nodes,..
+- BFS Traveral focus on visiting neighbors at current depth first
 
 ---
