@@ -36,7 +36,7 @@ class UndirectedGraph {
 
   /**
    * DFS code
-   * dfsRecurive(vertex):
+   * dfs(startingVertex):
    *  if vertex is empty
    *      return (this is base case)
    *  add vertex to result list // Result list contains object where key is node data, value is visited or not visited flag
@@ -115,4 +115,4 @@ console.log(uGraph.adjacencyList);
 
 console.log('-------------DFS Traversal------------');
 
-console.log(uGraph.dfs('A'));
+console.log(uGraph.dfs('A')); // [ 'A', 'B', 'D', 'E', 'C', 'F' ]
