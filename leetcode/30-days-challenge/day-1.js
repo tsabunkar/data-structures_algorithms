@@ -14,6 +14,7 @@
 
 // Space complexity - O(1)
 // TIme complexity - O(n)
+
 /* var singleNumber = function(nums) {
   let initialCounter = 0;
   element = nums[initialCounter];
