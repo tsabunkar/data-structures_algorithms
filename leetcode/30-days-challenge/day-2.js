@@ -15,16 +15,16 @@
  * 12 + 02 + 02 = 1
  */
 
-var isHappy = function(n) {
+var isHappy = function (n) {
   // do while bcoz- first any length number (single or not) should be applied with logic
   do {
     // converte push digit of number to array
-    let arr = spiltToDigits(n);
+    let arr = spiltToDigits(n); // ! Quadratic T.C O(n^2)
     // square each element in the array
-    arr = arr.map(element => squareDigit(element));
+    arr = arr.map((element) => squareDigit(element));
     // sum all the values of an array
     n = arr.reduce((accumulator, currentValue) => accumulator + currentValue);
-  } while (!isSingleDigit(n.toString()));
+  } while (!isSingleDigit(n.toString())); // !O(n)
 
   // Happy number in single digits are 1 and 7
   return n === 1 || n === 7 ? true : false;
@@ -37,8 +37,8 @@ function isSingleDigit(sum) {
 
 // using spread operator converte nums to num array, where each element is digit
 function spiltToDigits(num) {
-  let arr = [...num.toString()];
-  return arr.map(element => Number.parseInt(element));
+  let arr = [...num.toString()]; // !O(n)
+  return arr.map((element) => Number.parseInt(element));
 }
 
 function squareDigit(digit) {

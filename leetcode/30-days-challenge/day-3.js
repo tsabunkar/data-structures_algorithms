@@ -15,14 +15,16 @@
  * @param {number[]} nums
  * @return {number}
  */
-var maxSubArray = function(nums) {
+var maxSubArray = function (nums) {
   //   let maxSum = findMaxValue(nums);
-  let maxSum = Math.max(...nums);
+  let maxSum = Math.max(...nums); // !O(n)
   console.log('Initial Max no : ', maxSum);
   let tracerSum = nums[0];
   let i = 0;
 
+  // !O(n^2)- Quadratic T.C
   for (let trace = i + 1; i < nums.length; trace++) {
+    // !O(n)
     console.log('i -> ', i, 't ->', trace);
     tracerSum += nums[trace];
 
@@ -32,7 +34,7 @@ var maxSubArray = function(nums) {
     }
 
     if (trace >= nums.length - 1) {
-      i++;
+      i++; // !O(n)
       trace = i;
       tracerSum = nums[i];
       console.log('new i value', i, trace, ':: maxSum', maxSum);

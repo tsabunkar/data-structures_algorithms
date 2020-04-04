@@ -37,9 +37,11 @@
   return element;
 }; */
 
-var singleNumber = function(nums) {
+var singleNumber = function (nums) {
   let intialCounter = 0;
 
+  // ! O(n^2) -> Quadratic time complexity: every element is meeting everyother element.
+  // ! not necessary be nested loops
   for (let i = 0; i < nums.length; i++) {
     /*   console.log(' ++ ', intialCounter, i); */
     if (nums[intialCounter] === nums[i] && i !== intialCounter) {
