@@ -21,6 +21,9 @@
  *
  */
 
+let util = require('util');
+const { parse, stringify } = require('flatted/cjs');
+
 /**
  * Definition for singly-linked list.
  * function ListNode(val) {
@@ -33,7 +36,7 @@
  * @return {ListNode}
  */
 var middleNode = function (head) {
-  head = initializeNodesFromArray(head);
+  // head = initializeNodesFromArray(head);
 
   // Think that complete list/array is already present inside nodes, above head is the first
   // node of that singly linked list.
@@ -58,6 +61,17 @@ var middleNode = function (head) {
   return head;
 };
 
+// !2nd Approach
+var middleNode = function (head) {
+  let fast = head;
+  let slow = head;
+  while (fast != null && fast.next != null) {
+    fast = fast.next.next;
+    slow = slow.next;
+  }
+  return slow;
+};
+
 // Node Class, Class -> function in js
 function ListNode(val) {
   this.val = val;
@@ -68,9 +82,11 @@ function ListNode(val) {
   // }
 }
 
+// !creating function for constructor function class, since you can directly add fun as above
 ListNode.prototype.toString = function () {
   return `Current node value is ${this.val}, next node value is ${this.next.val}`;
 };
+
 // !Above code is -> constructor function may be converted to a class declaration as below
 /* 
 class ListNode {
@@ -87,25 +103,29 @@ function initializeNodesFromArray(arr) {
 
   this.currentNode = new ListNode(arr[0]); // current node value got initialize with first element of arr
   const initialHeadNode = this.currentNode;
+
   // nextNode = currentNode.next;
   // !instead of assigning to another variable, use same variable
+
   this.currentNode = this.currentNode.next;
 
-  for (let i = 1; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     this.currentNode = new ListNode(arr[i]);
     this.currentNode.next = this.currentNode; // creating the reference between two nodes
-    console.log(this.currentNode.toString());
   }
 
   // reseting back the first node
-  // this.currentNode = initialHeadNode;
+  this.currentNode = initialHeadNode;
 
-  console.log(
+  for (let i = 0; i < arr.length; i++) {
+    console.log(stringify(this.currentNode.next));
+  }
+  /*   console.log(
     'Reseting back -> ',
     this.currentNode,
     'Next Node: ',
     this.currentNode.next
-  );
+  ); */
 
   return this.currentNode;
 }
