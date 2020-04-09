@@ -18,7 +18,7 @@
 
 // !This logic has a flaw i.e- while checkObject word is 'dad' then key names would only
 // !have 'd' and 'a' as keys
-var groupAnagrams = function (strs) {
+/* var groupAnagrams = function (strs) {
   let resultArray = [];
 
   // check if the empty string is present then group them in one array
@@ -108,11 +108,43 @@ var groupAnagrams = function (strs) {
     '----------------------------------------------------------------------'
   );
   return resultArray;
+}; */
+
+var groupAnagrams = function (strs) {
+  let resultArray = [];
+  let subArray = [];
+  let initial = 0;
+
+  // let initialElement = strs[initial];
+
+  for (let i = initial + 1; i <= strs.length + 1 && strs.length !== 0; i++) {
+    if (i === strs.length) {
+      subArray.push(strs[initial]);
+      strs.splice(initial, 1);
+
+      resultArray.push(subArray);
+      initial++;
+      i = 0;
+      // i = -1;
+      subArray = [];
+    }
+
+    if (
+      strs.length !== 0 &&
+      [...strs[initial]].sort().toString() === [...strs[i]].sort().toString()
+    ) {
+      subArray.push(strs[i]);
+      // remove that element
+      strs.splice(i, 1);
+      i--;
+    }
+  }
+  // resultArray.push(subArray);
+
+  return resultArray;
 };
 
-/* var groupAnagrams = function (strs) {}; */
-
-// console.log(groupAnagrams(['eat', 'tea', 'tan', 'ate', 'nat', 'bat']));
+console.log(groupAnagrams(['eat', 'tea', 'tan', 'ate', 'nat', 'bat']));
 // console.log(groupAnagrams(['', 'b'])); // [["b"],[""]]
 // console.log(groupAnagrams(['', ''])); //  [["",""]]
 // console.log(groupAnagrams(['', 'b', ''])); // [["b"],["",""]]
@@ -120,8 +152,8 @@ var groupAnagrams = function (strs) {
 
 // console.log(groupAnagrams(['tao', 'pit', 'cam', 'aid', 'pro', 'dog']));
 
-console.log(
-  groupAnagrams(['paw', 'dad', 'bog', 'day', 'day', 'mig', 'len', 'rat'])
-);
+// console.log(
+//   groupAnagrams(['paw', 'dad', 'bog', 'day', 'day', 'mig', 'len', 'rat'])
+// );
 
 // console.log(groupAnagrams(['eat', 'tea', 'tan', 'ate', 'nat', 'bat']));

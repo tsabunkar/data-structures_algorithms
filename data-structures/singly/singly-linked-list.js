@@ -37,6 +37,7 @@ class SinglyLinkedList {
   push(value) {
     let node = new Node(value);
     if (!this.head) {
+      // if there is no head, i.e- linkedlist was not created at all.
       this.head = node;
       this.head = this.tail = node;
     } else {
