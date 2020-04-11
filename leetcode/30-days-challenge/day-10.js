@@ -70,9 +70,6 @@ MinStack.prototype.push = function (x) {
 MinStack.prototype.pop = function () {
   // !POP ->  Removing the element from the top of the stack
   // ! NOTE: Array.prototype.pop() -> removes the element form the last of array
-  if (!this.head) {
-    // return null;
-  }
 
   if (this.size === 1) {
     this.head = this.tail = null;
@@ -129,9 +126,9 @@ obj.push(2);
 console.log(obj.toString());
 obj.push(6);
 console.log(obj.toString());
-console.log('min value', obj.getMin());
+console.log("min value", obj.getMin());
 
 obj.pop();
-console.log('After poping the value -> ', obj.toString());
+console.log("After poping the value -> ", obj.toString());
 
-console.log('top Value', obj.top());
+console.log("top Value", obj.top());

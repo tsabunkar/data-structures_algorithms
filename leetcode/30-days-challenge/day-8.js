@@ -43,6 +43,7 @@ var middleNode = function (head) {
   const initialHeadNode = head; // creating the copy of the head Node
   let listSize = 0;
 
+  // * Don't touch your head -> Manipulate to the cloneHead
   while (head !== null) {
     head = head.next;
     listSize++;
