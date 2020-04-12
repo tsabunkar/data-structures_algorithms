@@ -39,22 +39,22 @@ var diameterOfBinaryTree = function (root) {
 };
  */
 
-function TreeNode(val) {
+/* function TreeNode(val) {
   this.val = val;
   this.left = this.right = null;
 }
 
 function BinaryTree() {
   this.root = null;
-}
-
+} */
+/* 
 BinaryTree.prototype.insert = function () {};
 BinaryTree.prototype.remove = function () {};
 
-BinaryTree.prototype.search = function () {};
+BinaryTree.prototype.search = function () {}; */
 
 /**
  * @param {TreeNode} root
  * @return {number}
  */
-BinaryTree.prototype.diameterOfBinaryTree = function (root) {};
+// BinaryTree.prototype.diameterOfBinaryTree = function (root) {};
