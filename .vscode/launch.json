@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "nodemon",
       "runtimeExecutable": "nodemon",
-      "program": "${workspaceFolder}/leetcode/30-days-challenge/day-9.js",
+      "program": "${workspaceFolder}/leetcode/30-days-challenge/day-13.js",
       "restart": true,
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
