@@ -18,10 +18,10 @@
  * @return {number}
  */
 var findMaxLength = function (nums) {
-  let maxlen = 0;
+  let maxlen = 0; // 6
   for (let start = 0; start < nums.length; start++) {
-    let zeroes = 0;
-    let ones = 0;
+    let zeroes = 0; // 0
+    let ones = 0; // 0
     for (let end = start; end < nums.length; end++) {
       if (nums[end] == 0) {
         zeroes++;
@@ -44,3 +44,5 @@ console.log(findMaxLength([0, 0, 0, 1, 1, 1, 0])); // exp- 6
 
 // [0,1,1,0]
 // [0,1,0,0,1]
+
+//

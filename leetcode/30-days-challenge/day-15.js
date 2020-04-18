@@ -59,4 +59,5 @@ var productExceptSelf = function (nums) {
   return outputArray;
 };
 
-productExceptSelf([1, 2, 3, 4]);
+// productExceptSelf([1, 2, 3, 4]);
+productExceptSelf([1]);
