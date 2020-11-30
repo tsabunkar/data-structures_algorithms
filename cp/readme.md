@@ -15,5 +15,8 @@
 - Copy of Junior Training Sheet: https://
   - https://docs.google.com/spreadsheets/d/1RoQddA_T1hQH_t3jpMcRLj5gkc_3oZXG6rQ6pI6DWCU/edit#gid=84654839
 - 450 Questions: https://drive.google.com/file/d/1FMdN_OCfOI0iAeDlqswCiC2DZzD4nPsb/view
+- Books:
+  - Competitive Programmers Handbook by Antti Laaksonen
+  - Guide to Competitive Programming by Antti Laaksonen
 
 ---
