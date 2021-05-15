@@ -26,7 +26,7 @@ class Stack {
    * - Set the next property on the node to be the previously created variable
    * - Increment the size by 1
    */
-  push(newVal) {
+  insertElement(newVal) {
     let newNode = new Node(newVal);
     if (this.size === 0 || !this.head) {
       this.head = this.tail = newNode;
@@ -50,7 +50,7 @@ class Stack {
    * - Decrement the size by 1
    * - Return the value of the node removed
    */
-  pop() {
+  removeElement() {
     if (this.size === 0 || !this.head) {
       return null;
     }
@@ -65,18 +65,53 @@ class Stack {
     this.size--;
     return nodeToPop.value;
   }
+
+  length() {
+    return this.size;
+  }
+
+  readStack() {
+    const initialHeadPointer = this.head;
+    for (let index = 0; index < this.length(); index++) {
+      const currentNodeVal = this.head.value;
+      // console.log(nextNodeVal);
+      process.stdout.write(`${currentNodeVal}, `);
+      this.head = this.head.next;
+    }
+    console.log('\n');
+    this.head = initialHeadPointer; // after looping through the stack, repoint the head to start node
+  }
+
+  reverse() {
+    const initialHeadPointer = this.head;
+    for (let index = 0; index < this.length(); index++) {
+      const currentNodeVal = this.head.value;
+      const reversedString = currentNodeVal.split('').reverse().join('');
+      process.stdout.write(`${reversedString}, `);
+      this.head = this.head.next;
+    }
+    console.log('\n');
+    this.head = initialHeadPointer;
+  }
 }
 
-console.log('____________________________');
+console.log('____________Add Elements into Stack________________');
 let stack = new Stack();
-console.log(stack.push('Harry'));
-console.log(stack.push('Hermione'));
-console.log(stack.push('Ron'));
-// console.log(stack.push('lord Voldamote'));
+console.log(stack.insertElement('Harry'));
+console.log(stack.head.value);
+stack.insertElement('Hermione');
+stack.insertElement('Ron');
 
-console.log(JSON.stringify(stack));
+console.log('____________Complete Stack :________________');
+stack.readStack();
+// console.log(JSON.stringify(stack));
 
-console.log('____________POP____________');
+console.log('____________Remove Elements from Stack____________');
 
-console.log(stack.pop());
-console.log(JSON.stringify(stack));
+console.log('Element removed : ', stack.removeElement());
+// console.log(JSON.stringify(stack));
+stack.readStack();
+
+console.log('_______Reverse each word of the stack________');
+
+stack.reverse();
