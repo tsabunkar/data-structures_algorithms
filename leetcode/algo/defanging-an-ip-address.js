@@ -14,17 +14,21 @@
  * @param {string} address
  * @return {string}
  */
-var defangIPaddr = function(address) {
-	return address.replaceAll('.', '[.]');
+var defangIPaddr = function (address) {
+  return address.replaceAll(".", "[.]");
 };
 
-var defangIPaddr2 = function(address) {
-	const charArray = address.split('.'); // splitted by .
-	return charArray.join('[.]');
+var defangIPaddr2 = function (address) {
+  const charArray = address.split("."); // splitted by .
+  return charArray.join("[.]");
 };
 
-
+var defangIPaddr3 = function (address) {
+  // using Regex
+  return address.replace(/\./g, "[.]");
+};
 
 //console.log(defangIPaddr("1.1.1.1"));
 //console.log(defangIPaddr("255.100.50.0"));
 //console.log(defangIPaddr2("255.100.50.0"));
+console.log(defangIPaddr3("255.100.50.0"));
