@@ -40,15 +40,47 @@
  * @param {number} extraCandies
  * @return {boolean[]}
  */
-var kidsWithCandies = function (candies, extraCandies) {
-  const maxGuyCandy = Math.max(...candies);
+var kidsWithCandies1 = function (candies, extraCandies) {
+  const maxGuyCandy = Math.max(...candies); // O(n)
   let result = [];
   for (let i = 0; i < candies.length; i++) {
+    // O(n)
     const guyCandy = candies[i];
     if (extraCandies + guyCandy >= maxGuyCandy) result[i] = true;
     else result[i] = false;
   }
   return result;
+};
+
+// ! Making above code more shorter
+var kidsWithCandies2 = function (candies, extraCandies) {
+  // const maxGuyCandy = Math.max(...candies);
+  return candies.map(
+    (guyCandy) => extraCandies + guyCandy >= Math.max(...candies)
+  );
+};
+
+// ! NOTE: Not recommended to use Math.max() with spread operator because it will fail on big
+// ! arrays (since all elements are passed as parameters and there is a limit to that)
+
+/**
+ * https://medium.com/coding-at-dawn/the-fastest-way-to-find-minimum-and-maximum-values-in-an-array-in-javascript-2511115f8621
+ */
+
+var kidsWithCandies = function (candies, extraCandies) {
+  return candies.map(
+    (guyCandy) => extraCandies + guyCandy >= forLoopMaxFinder(candies)
+  );
+};
+
+const forLoopMaxFinder = (array) => {
+  let max = array[0];
+
+  for (let i = 1; i < array.length; i++) {
+    max = array[i] > max ? array[i] : max;
+  }
+
+  return max;
 };
 
 module.exports = kidsWithCandies;
