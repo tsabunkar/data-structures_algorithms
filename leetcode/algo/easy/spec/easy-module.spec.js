@@ -45,4 +45,7 @@ describe("Buddy Strings", () => {
   it('Should pass for "ab", "a"', () => {
     expect(buddyStrings("ab", "a")).toEqual(false);
   });
+  it('Should pass for "abab", "abab"', () => {
+    expect(buddyStrings("abab", "abab")).toEqual(true);
+  });
 });

@@ -27,3 +27,7 @@ https://medium.com/siliconwat/data-structures-in-javascript-1b9aed0ea17c
 - ![TC](./time-complexity-graph.png)
 
 ---
+
+# Good Reads
+
+- https://medium.com/coding-at-dawn/the-fastest-way-to-find-minimum-and-maximum-values-in-an-array-in-javascript-2511115f8621

@@ -35,7 +35,7 @@ var backspaceCompare = function (S, T) {
 
 function removeBackspaceCharacter(charArray) {
   for (let i = 0; i < charArray.length; i++) {
-    if (charArray[i] === '#') {
+    if (charArray[i] === "#") {
       charArray[i] = charArray[i - 1] = null;
       i = i - 2;
     }
@@ -43,12 +43,12 @@ function removeBackspaceCharacter(charArray) {
   }
 
   console.log(charArray);
-  return charArray.join('');
+  return charArray.join("");
 }
 
 // console.log(backspaceCompare('ab#c', 'ad#c'));
 // console.log(backspaceCompare('ab##', 'c#d#'));
-console.log(backspaceCompare('a##c', '#a#c'));
+console.log(backspaceCompare("a##c", "#a#c"));
 // console.log(backspaceCompare('a#c', 'b'));
 // console.log(backspaceCompare('xywrrmp', 'xywrrmu#p'));
 
